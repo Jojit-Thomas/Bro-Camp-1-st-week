@@ -1,5 +1,6 @@
-#include<stdio.h>
+// ******************** Switch case ********************
 
+#include<stdio.h>
 
 int main()
 {

@@ -1,18 +1,30 @@
 #include<stdio.h>
-int main(){
-int a[100];
-int i,size,index;
-printf("Enter limit");
-scanf("%d",&size);
-printf("Enter numbers");
-for(i=0;i<size;i++){
-    scanf("%d",&a[i]);}
-    printf("enter number for deletion ");
-    scanf("%d",&index);
-for(i=index-1;i <= size;i++){
-    a[i]=a[i+1];
-}
-for(int k=0;k<size-1;k++){
-printf("%d",a[k]);}
-return 0;
+
+int main()
+{
+    int size;
+    int deleteIndex;
+    printf("Enter the size of array : ");
+    scanf("%d",&size);
+    int array[size];
+    // ******************** Getting the input from the user into array ********************
+    for (int iterator = 0; iterator < size; iterator++)
+    {
+        scanf("%d",&array[iterator]);
+    }
+    printf("Enter the Index of deletion");
+    scanf("%d",&deleteIndex);
+    // ******************** Deleting Array ********************
+    for (int delteLoop = array[deleteIndex]; delteLoop < size; delteLoop++)
+    {
+        array[deleteIndex] = array[deleteIndex + 1];
+    }
+    // ******************** Printing Array ********************
+    for (int arrayIndex = 0; arrayIndex < size - 1 ; arrayIndex++)
+    {
+        printf("%d",array[arrayIndex]);
+    }
+    
+    
+    
 }

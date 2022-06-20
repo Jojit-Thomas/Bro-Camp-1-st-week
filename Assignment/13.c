@@ -4,6 +4,7 @@
 // | |    | '_ \ / _ \/ __| |/ / |  ___/ _` | | | '_ \ / _` | '__/ _ \| '_ ` _ \ / _ \
 // | |____| | | |  __/ (__|   <  | |  | (_| | | | | | | (_| | | | (_) | | | | | |  __/
 //  \_____|_| |_|\___|\___|_|\_\ |_|   \__,_|_|_|_| |_|\__,_|_|  \___/|_| |_| |_|\___|
+// ******************** Check Palindrome ********************
 
 #include <stdio.h>
 #include <stdbool.h>
@@ -16,12 +17,12 @@ int main()
     bool notPalindrome = false;
     printf("Enter a string");
     scanf("%s", array);
-    // for (int i = 0; array[i] != '\0'; i++)
-    // {
-    //     size ++;
-    // }
-    size = strlen(array);
-    printf("%d", size);
+    for (int i = 0; array[i] != '\0'; i++)
+    {
+        size ++;
+    }
+    // size = strlen(array);
+
     for (int iterate = 0; iterate < size / 2; iterate++)
     {
         // compare the first element of array with last element

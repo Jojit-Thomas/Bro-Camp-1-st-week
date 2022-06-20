@@ -1,30 +1,36 @@
-#include <stdio.h>
-int main(){
-    int a[50];
-    int i,numb,size,posi;
-    printf("Enter the array size");
-scanf("%d",&size);
-printf("Enter the numbers to be inserted in to the array");
-for(i=0;i<size;i++){
-scanf("%d",&a[i]);
-}
-printf("Enter the number to be inserted");
-scanf("%d",&numb);
-printf("Enter the position to be insered");
-scanf("%d",&posi);
-// for(i=size-1;i>posi-1;i--){
-//     a[i]=a[i];}
-//     a[posi-1]=numb;
-//     size++;
-//     printf("%d",a[i]);
+#include<stdio.h>
 
-for(i=index-1;i <= size;i++){
-    a[i]=a[i+1];
-}
-
-for (int iterate = 0; iterate < size; iterate++)
+int main()
 {
-    printf("%d",a[i]);
-}
-return 0;
+    int size;
+    int insertValue;
+    int insertIndex;
+    printf("Enter the size of the array");
+    scanf("%d",&size);
+    int array[50];
+    // ******************** Getting the value from the user into array ********************
+    for (int inputIndex = 0; inputIndex < size; inputIndex++)
+    {
+        scanf("%d",&array[inputIndex]);
+    }
+
+    printf("Enter the value to be inserted");
+    scanf("%d", &insertValue);
+
+    printf("Enter the index to be inserted");
+    scanf("%d", &insertIndex);
+
+    // ******************** Inserting Array ********************
+    for (int insertLoopIndex = size ; insertLoopIndex >= insertIndex; insertLoopIndex--)
+    {
+        array[insertLoopIndex + 1 ] = array[insertLoopIndex];
+    }
+    array[insertIndex] = insertValue;
+    
+    // ******************** Printing Array ********************
+    for (int printIndex = 0; printIndex < size + 1; printIndex++)
+    {
+        printf("%d ", array[printIndex]);
+    }
+    
 }

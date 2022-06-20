@@ -1,3 +1,5 @@
+// ******************** number of even numbers in array ********************
+
 #include<stdio.h>
 
 int main()
@@ -8,7 +10,7 @@ int main()
     scanf("%d",&size);
     int arr[size];
     printf("Enter the values of array");
-    for(int i = 0; i <= size; i++){
+    for(int i = 0; i <= size - 1; i++){
         scanf("%d",&arr[i]);
     }
     for(int j = 0; j< size; j++){

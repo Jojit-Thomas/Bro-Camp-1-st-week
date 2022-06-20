@@ -1,3 +1,5 @@
+// ******************** Multiplication Table ********************
+
 #include<stdio.h>
 
 int main()
