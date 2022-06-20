@@ -1,69 +1,52 @@
-//    1
-
-//   232
-
-//  34543
-
-// 4567654
-
-//567898765   
+// * * * * * 
+// *
+// *
+// * * *
+// *
+// *
+// * * * * *
+// *
+// *
+// * * *
+// *
+// *
+// * * * * *
 
 #include <stdio.h>
 
 int main()
-
 {
-
     int limit = 5;
-
-    for (int row = 1; row <= limit; row++)
-
+    int colLimit = 3;
+    int rowLimit = 2;
+    int count = 2;
+    for (int row = 0; row < limit; row++)
     {
-
-        for (int space = 1; space <= limit - row; space++)
-
+        if (row % 2 == 0)
         {
-
-            printf(" ");
-
-        }
-
-        int sub = 0;
-
-        for (int col = row; col < row + ( 2 * row - 1 ); col++)
-
-        {            
-
-            if (row * 2 -1 < col)
-
+            colLimit += 2;
+            for (int colStar = 0; colStar < colLimit; colStar++)
             {
-
-                sub = sub + 2;
-
-                int ans = col - sub;
-
-                printf("%d", ans);
-
-                //printf("%d", sub);
-
-                    
-
-            } else
-
-            {
-
-                printf("%d", col);
-
+                printf("* ");
             }
-
-            
-
+        }
+        else
+        {
+            colLimit -= 2;
+            for (int colStar = 0; colStar < colLimit; colStar++)
+            {
+                printf("* ");
+            }
         }
 
         printf("\n");
-
+        for (int rowStar = 0; rowStar < rowLimit; rowStar++)
+        {
+            if(row == limit -1){
+                break;
+            }
+            printf("* ");
+            printf("\n");
+        }
     }
-
-    return 0;
-
 }

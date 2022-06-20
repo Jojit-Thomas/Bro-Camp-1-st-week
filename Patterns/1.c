@@ -1,18 +1,18 @@
 
-//  *
-//* * *
-//  +
-//  +
-//* * * * *
-//  +
-//  +
-//  +
-//* * * * * * *
-//  +
-//  +
-//  +
-//  +
-//* * * * * * * * *
+//   *
+// * * *
+//   *
+//   *
+// * * * * *
+//   *
+//   *
+//   *
+// * * * * * * *
+//   *
+//   *
+//   *
+//   *
+// * * * * * * * * *
 
 #include<stdio.h>
 
@@ -22,7 +22,7 @@ int main()
     int colLimit = 3;
     for(int row = 1; row <= limit; row++){
         for(int rowStar = 1; rowStar <= row  ; rowStar++){
-            printf("  +");
+            printf("  *");
             printf("\n");
         }
         

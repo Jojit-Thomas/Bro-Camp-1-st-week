@@ -1,21 +1,69 @@
-#include<stdio.h>
+//    1
+
+//   232
+
+//  34543
+
+// 4567654
+
+//567898765   
+
+#include <stdio.h>
 
 int main()
+
 {
-    int row = 4;
-    for(int i = 1; i <= row; i++){
-        for(int space = 1; space <= row-i; space++)
+
+    int limit = 5;
+
+    for (int row = 1; row <= limit; row++)
+
+    {
+
+        for (int space = 1; space <= limit - row; space++)
+
         {
+
             printf(" ");
+
         }
-        for(float col= 1 ; col <=i;col+=0.5    ){
-            printf("*");
+
+        int sub = 0;
+
+        for (int col = row; col < row + ( 2 * row - 1 ); col++)
+
+        {            
+
+            if (row * 2 -1 < col)
+
+            {
+
+                sub = sub + 2;
+
+                int ans = col - sub;
+
+                printf("%d", ans);
+
+                //printf("%d", sub);
+
+                    
+
+            } else
+
+            {
+
+                printf("%d", col);
+
+            }
+
+            
+
         }
-    
-    printf("\n");
-    
+
+        printf("\n");
+
     }
-    
-    
+
     return 0;
+
 }
