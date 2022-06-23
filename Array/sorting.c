@@ -15,13 +15,13 @@ int main()
     // ******************** Sorting Array ********************
     for (int sortIndex = 0; sortIndex < size - 1; sortIndex++)
     {
-        for (int nestedSortIndex = 1; nestedSortIndex < size; nestedSortIndex++)
+        for (int nestedSortIndex = sortIndex + 1; nestedSortIndex < size; nestedSortIndex++)
         {
-            if (array[sortIndex] > array[sortIndex + 1])
+            if (array[sortIndex] > array[nestedSortIndex])
             {
                 int temp = array[sortIndex];
-                array[sortIndex] = array[sortIndex + 1];
-                array[sortIndex + 1] = temp;
+                array[sortIndex] = array[nestedSortIndex];
+                array[nestedSortIndex] = temp;
             }
         }
     }

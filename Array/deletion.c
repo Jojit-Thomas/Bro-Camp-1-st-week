@@ -15,7 +15,7 @@ int main()
     printf("Enter the Index of deletion");
     scanf("%d",&deleteIndex);
     // ******************** Deleting Array ********************
-    for (int delteLoop = array[deleteIndex]; delteLoop < size; delteLoop++)
+    for (int delteLoop = deleteIndex; delteLoop < size; delteLoop++)
     {
         array[deleteIndex] = array[deleteIndex + 1];
     }
